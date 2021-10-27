@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS inout_db;
+CREATE DATABASE inout_db;
