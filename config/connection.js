@@ -1,1 +1,1 @@
-// const sequelize = resquire('sequelize')
+const sequelize = require('sequelize')
