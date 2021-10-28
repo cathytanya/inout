@@ -1,1 +1,1 @@
-const sequalize = resquire('sequalize')
+// const sequelize = resquire('sequelize')
