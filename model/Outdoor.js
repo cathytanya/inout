@@ -13,7 +13,7 @@ Outdoor.init({
             // Set as primary key
             primaryKey: true,
             // Uses auto increment
-            initialAutoIncrement: true
+            autoIncrement: true
           },
         // category_out_id int not null,
         // foreign key (category_out_id) references category(id)
@@ -33,7 +33,9 @@ Outdoor.init({
     },
     {
         sequelize,
-        timestamps: false
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'outdoor'
     });
-
 module.exports = Outdoor

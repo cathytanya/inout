@@ -13,7 +13,7 @@ Indoor.init({
             // Set as primary key
             primaryKey: true,
             // Uses auto increment
-            initialAutoIncrement: true
+            autoIncrement: true
           },
         // category_in_id int not null,
         // foreign key (category_in_id) references category(id)
@@ -33,7 +33,10 @@ Indoor.init({
     },
     {
         sequelize,
-        timestamps: false
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'indoor'
     });
 
 module.exports = Indoor

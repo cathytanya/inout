@@ -13,7 +13,7 @@ Comment.init({
             // Set as primary key
             primaryKey: true,
             // Uses auto increment
-            initialAutoIncrement: true
+            autoIncrement: true
           },
         //   user_id int not null,
         // foreign key (user_id) references user_(id)
@@ -32,7 +32,9 @@ Comment.init({
     },
     {
         sequelize,
-        timestamps: false
-    });
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'comment'    });
 
 module.exports = Comment
