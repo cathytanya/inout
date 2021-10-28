@@ -17,7 +17,7 @@ Comment.init({
           },
         //   user_id int not null,
         // foreign key (user_id) references user_(id)
-        user_id:{
+        user:{
             type: DataTypes.INTEGER,
             allowNull: false,
             references:{
