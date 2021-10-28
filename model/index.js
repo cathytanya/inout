@@ -7,13 +7,13 @@ const User = require('./User');
 Comment.belongsTo(User,{
     foreignKey:'user_id'
 });
-// foreign key (category_in_id) references category(id)
+// foreign key (category_id) references category(id)
 Indoor.belongsTo(Category,{
-    foreignKey:'category_in_id'
+    foreignKey:'category_id'
 })
 // foreign key (category_out_id) references category(id)
 Outdoor.belongsTo(Category,{
-    foreignKey:'category_out_id'
+    foreignKey:'category_id'
 })
 
 module.exports={

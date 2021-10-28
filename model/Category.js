@@ -16,7 +16,7 @@ Category.init({
             initialAutoIncrement: true
           },
         //   category_id varchar(30) not null
-        category_id:{
+        category_name:{
             type: DataTypes.STRING,
             allowNull: false
         }
