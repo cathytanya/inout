@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Indoor, Outdoor } = require('../models');
+const { Category, Indoor, Outdoor } = require('../../model');
 
 // Get all categories
 router.get('/', async (req, res) => {
