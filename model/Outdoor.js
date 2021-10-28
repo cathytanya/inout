@@ -17,7 +17,7 @@ Outdoor.init({
           },
         // category_out_id int not null,
         // foreign key (category_out_id) references category(id)
-        category_out_id:{
+        category_id:{
             type: DataTypes.INTEGER,
             allowNull: false,
             references:{
@@ -26,7 +26,7 @@ Outdoor.init({
             }
         },
         // activity_out_Name varchar(30) not null,
-        activity_out_Name:{
+        activity_Name:{
             type: DataTypes.STRING,
             allowNull: false
         }
