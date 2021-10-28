@@ -13,7 +13,7 @@ User.init({
             // Set as primary key
             primaryKey: true,
             // Uses auto increment
-            initialAutoIncrement: true
+            autoIncrement: true
           },
         //   username varchar(30) not null,
         username:{
@@ -33,7 +33,10 @@ User.init({
     },
     {
         sequelize,
-        timestamps: false
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'user'
     });
 
 module.exports = User

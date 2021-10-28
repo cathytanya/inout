@@ -13,7 +13,7 @@ Category.init({
             // Set as primary key
             primaryKey: true,
             // Uses auto increment
-            initialAutoIncrement: true
+            autoIncrement: true
           },
         //   category_id varchar(30) not null
         category_name:{
@@ -23,7 +23,10 @@ Category.init({
     },
     {
         sequelize,
-        timestamps: false
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'category'
     });
 
 module.exports = Category
