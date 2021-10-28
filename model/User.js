@@ -30,6 +30,10 @@ User.init({
             type: DataTypes.STRING,
             allowNull: false
         }
-    })
+    },
+    {
+        sequelize,
+        timestamps: false
+    });
 
 module.exports = User

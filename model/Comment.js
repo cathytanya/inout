@@ -1,6 +1,6 @@
 // the required dependencies for the file
-const {Model,DataTypes} = require('sequelize')
-const sequelize = require('../config/connection.js')
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection.js');
 
 class Comment extends Model {}
 Comment.init({
@@ -29,6 +29,10 @@ Comment.init({
         comment:{
             type: DataTypes.STRING
         }
-    })
+    },
+    {
+        sequelize,
+        timestamps: false
+    });
 
 module.exports = Comment
