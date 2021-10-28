@@ -2,22 +2,22 @@ const { Outdoor } = require('../model/Outdoor')
 
 const outdoorData = [
     {
-        activity_Name: 'Hiking'
+        activity_name: 'Hiking'
     },
     {
-        activity_Name: 'Running'
+        activity_name: 'Running'
     },
     {
-        activity_Name: 'Shopping'
+        activity_name: 'Shopping'
     },
     {
-        activity_Name: 'Resteraunts'
+        activity_name: 'Resteraunts'
     },
     {
-        activity_Name: 'Wine Tasting'
+        activity_name: 'Wine Tasting'
     },
     {
-        activity_Name: 'Spa Day'
+        activity_name: 'Spa Day'
     }
 ]
 

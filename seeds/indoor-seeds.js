@@ -2,22 +2,22 @@ const { Indoor } = require('../model/Indoor')
 
 const indoorData = [
     {
-        activity_Name: 'Video Games'
+        activity_name: 'Video Games'
     },
     {
-        activity_Name: 'Yoga'
+        activity_name: 'Yoga'
     },
     {
-        activity_Name: 'Receipt'
+        activity_name: 'Receipt'
     },
     {
-        activity_Name: 'Paint By Number'
+        activity_name: 'Paint By Number'
     },
     {
-        activity_Name: 'Watch Movies'
+        activity_name: 'Watch Movies'
     },
     {
-        activity_Name: 'Spa Day'
+        activity_name: 'Spa Day'
     }
 ]
 
