@@ -2,8 +2,8 @@
 const {Model,DataTypes} = require('sequelize')
 const sequelize = require('..//config/connection')
 
-class Outdoor extends Model {}
-Outdoor.init({
+class Category extends Model {}
+Category.init({
         // the column ID
         id: {
             // Integer
@@ -15,21 +15,11 @@ Outdoor.init({
             // Uses auto increment
             initialAutoIncrement: true
           },
-        // category_out_id int not null,
-        // foreign key (category_out_id) references category(id)
-        category_out_id:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references:{
-                model:'category',
-                key:'id'
-            }
-        },
-        // activity_out_Name varchar(30) not null,
-        activity_out_Name:{
+        //   category_id varchar(30) not null
+        category_id:{
             type: DataTypes.STRING,
             allowNull: false
         }
     })
 
-module.exports = Outdoor
+module.exports = Category

@@ -1,0 +1,1 @@
+const sequalize = resquire('sequalize')
