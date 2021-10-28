@@ -1,14 +1,11 @@
 const router = require('express').Router();
-const { Category, Indoor, Outdoor } = require('../../models');
+const { Category, Indoor, Outdoor } = require('../models');
 
-// The `/api/categories` endpoint
-
+// Get all categories
 router.get('/', async (req, res) => {
-  // find all categories
-  // be sure to include its associated Products
   try {
     const categoryData = await Category.findAll({
-      include: [{ model: Comment },{ model: Indoor }, { model: Outdoor }],
+      include: [{ model: Indoor }, { model: Outdoor }],
     });
     res.status(200).json(categoryData);
   } catch (err) {
@@ -16,19 +13,21 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', (req, res) => {
-  Category.findOne({
-    where: {
-      id: req.params.id,
-    },
-    include: [Product],
-  })
-    .then((category) => res.json(category))
-    .catch((err) => res.status(400).json(err));
+// Get category by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const categoryData = await Category.findOne({
+      where: { id: req.params.id },
+      include: [{ model: Indoor }, { model: Outdoor }],
+    });
+    res.status(200).json(categoryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
+// Create new category
 router.post('/', async (req, res) => {
-  // create a new category
   try {
     const categoryData = await Category.create({
       category_name: req.body.category_name,
@@ -39,13 +38,11 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Update category by ID
 router.put('/:id', async (req, res) => {
-  // update a category by its `id` value
   try {
     const categoryData = await Category.update(req.body, {
-      where: {
-        id: req.params.id,
-      },
+      where: { id: req.params.id },
     });
     if (!categoryData[0]) {
       res.status(404).json({ message: 'No category with this ID' });
@@ -56,8 +53,8 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// Delete category by ID
 router.delete('/:id', async (req, res) => {
-  // delete a category by its `id` value
   const categoryData = await Category.destroy({
     where: {
       id: req.params.id,
