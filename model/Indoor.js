@@ -30,6 +30,10 @@ Indoor.init({
             type: DataTypes.STRING,
             allowNull: false
         }
-    })
+    },
+    {
+        sequelize,
+        timestamps: false
+    });
 
 module.exports = Indoor
