@@ -1,6 +1,6 @@
 // the required dependencies for the file
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection.js');
+const sequelize = require('../config/connection');
 
 class Comment extends Model {}
 Comment.init({
@@ -19,9 +19,9 @@ Comment.init({
         // foreign key (user_id) references user_(id)
         user:{
             type: DataTypes.INTEGER,
-            allowNull: false,
+            // allowNull: false,
             references:{
-                model:'user_',
+                model:'user',
                 key:'id'
             }
         },

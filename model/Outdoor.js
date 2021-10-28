@@ -1,5 +1,5 @@
 // the required dependencies for the file
-const {Model,DataTypes} = require('sequelize')
+const { Model,DataTypes} = require('sequelize')
 const sequelize = require('../config/connection')
 
 class Outdoor extends Model {}
@@ -19,14 +19,14 @@ Outdoor.init({
         // foreign key (category_out_id) references category(id)
         category_id:{
             type: DataTypes.INTEGER,
-            allowNull: false,
+            // allowNull: false,
             references:{
                 model:'category',
                 key:'id'
             }
         },
         // activity_out_Name varchar(30) not null,
-        activity_Name:{
+        activity_name:{
             type: DataTypes.STRING,
             allowNull: false
         }

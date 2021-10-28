@@ -6,24 +6,26 @@ const seedOutdoor = require('./outdoor-seeds');
 const seedUser = require('./user-seeds');
 
 // dependency
-const sequalize = require('../config/connection');
+const sequelize = require('../config/connection');
 
 const seedAll = async () => {
-    await sequalize.sync({force: true});
-    consol.log('\---------DATABASE---------');
+    await sequelize.sync({force: true});
+    console.log('\---------DATABASE---------');
+
     await seedUser();
-    consol.log('\---------USER SEEDS---------');
+    console.log('\---------USER SEEDS---------');
+    
     await seedCategory();
-    consol.log('\---------CATEGORY SEEDS---------');
+    console.log('\---------CATEGORY SEEDS---------');
 
     await seedIndoor();
-    consol.log('\---------INDOOR SEEDS---------');
+    console.log('\---------INDOOR SEEDS---------');
 
     await seedOutdoor();
-    consol.log('\---------OUTDOOR SEEDS---------');
+    console.log('\---------OUTDOOR SEEDS---------');
 
     await seedComment();
-    consol.log('\---------COMMENT SEEDS---------');
+    console.log('\---------COMMENT SEEDS---------');
 
     process.exit(0);
 }
