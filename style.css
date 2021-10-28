@@ -30,6 +30,10 @@
     transform: scale(3);
     margin-right:1vw;
 }
+.fa-home{
+    transform: scale(3);
+    margin-right:1vw;
+}
 
 #profile-menu{
     border: none;
@@ -61,6 +65,7 @@
     color:white;
     font-size: 700%;
     font-weight: bold;
+    text-decoration: none;
 }
 .outside {
     background-image: url("https://images.unsplash.com/photo-1592753054398-9fa298d40e85?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=765&q=80");
@@ -80,7 +85,47 @@
     font-size: 700%;
     padding-left:4%;
     padding-right:4%;
-    /* background: rgb(134, 133, 133, 20%); */
+    text-decoration: none;    
+}
+
+/* PAGE 2 ---Preferences */
+.background-image{
+    background-image: url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;   
+    width: 100%;
+}
+.preferences-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    min-height: 85vh;
+}
+.filter {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 22px 60px;
+    background: whitesmoke;
+    color: black;
+    border-radius: 54px;
+    margin: 1vw;
+    font-weight: bold;
+    font-size: 120%;
+    align-self: center;
+
+}
+/* PAGE 2 ---Activities (Results) */
+.activities-container{
+    margin-top: 5vh;   
+}
+.column{
+    justify-content: center;
+    margin-bottom: 5vh;
+}
+.card{
+    margin:auto;
 }
 
 /* Fotter Styling */
