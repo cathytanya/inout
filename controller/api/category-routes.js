@@ -5,7 +5,7 @@ const { Category, Indoor, Outdoor } = require('../../model');
 router.get('/', async (req, res) => {
   try {
     const categoryData = await Category.findAll({
-      include: [{ model: Indoor }, { model: Outdoor }],
+      // include: [{ model: Indoor }, { model: Outdoor }],
     });
     res.status(200).json(categoryData);
   } catch (err) {
