@@ -150,7 +150,19 @@ h2{
 .subMenu {
     font-size: 120%;
 }
-/* media query */
+/* PAGE 3--header styling */
+.header3 {
+    height: 15vh;
+}
+.page3-logo{
+    
+}
+/* PAGE 3 --info section styling */
+.info{
+    margin-top: 2vh;
+}
+
+/* PAGE 1--media query */
 
 @media screen and (max-width: 768px){
     .fa-envelope {
