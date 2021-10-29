@@ -1,9 +1,9 @@
 // the required dependencies for the file
-const {Model,DataTypes} = require('sequelize')
+const { Model,DataTypes} = require('sequelize')
 const sequelize = require('../config/connection')
 
-class User extends Model {}
-User.init({
+class Outdoor extends Model {}
+Outdoor.init({
         // the column ID
         id: {
             // Integer
@@ -15,18 +15,18 @@ User.init({
             // Uses auto increment
             autoIncrement: true
           },
-        //   username varchar(30) not null,
-        username:{
-            type: DataTypes.STRING,
-            allowNull: false
+        // category_out_id int not null,
+        // foreign key (category_out_id) references category(id)
+        category_id:{
+            type: DataTypes.INTEGER,
+            // allowNull: false,
+            references:{
+                model:'category',
+                key:'id'
+            }
         },
-        // email varchar(30) not null
-        email:{
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        // pass_word varchar(30) not null
-        pass_word:{
+        // activity_out_Name varchar(30) not null,
+        activity_name:{
             type: DataTypes.STRING,
             allowNull: false
         }
@@ -36,7 +36,6 @@ User.init({
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'outdoor'
     });
-
-module.exports = User
+module.exports = Outdoor

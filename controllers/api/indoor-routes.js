@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Indoor, Category } = require('../../model');
+const { Indoor, Category } = require('../../models');
 
 // Get all indoor activities
 router.get('/', async (req, res) => {

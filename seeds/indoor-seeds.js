@@ -1,25 +1,31 @@
-const { Indoor } = require('../model/Indoor')
+const { Indoor } = require('../model')
 
 const indoorData = [
     {
-        activity_Name: 'Video Games'
+        // category_id: 1,
+        activity_name: 'Video Games',
     },
     {
-        activity_Name: 'Yoga'
+        // category_id: 2,
+        activity_name: 'Yoga'
     },
     {
-        activity_Name: 'Receipt'
+        // category_id: 3,
+        activity_name: 'Receipt'
     },
     {
-        activity_Name: 'Paint By Number'
+        // category_id: 4,
+        activity_name: 'Paint By Number'
     },
     {
-        activity_Name: 'Watch Movies'
+        // category_id: 5,
+        activity_name: 'Watch Movies'
     },
     {
-        activity_Name: 'Spa Day'
+        // category_id: 6,
+        activity_name: 'Spa Day'
     }
 ]
 
 const seedIndoor = () => Indoor.bulkCreate(indoorData);
-module.export = seedIndoor;
+module.exports = seedIndoor;

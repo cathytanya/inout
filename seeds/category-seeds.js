@@ -1,4 +1,4 @@
-const { Category } = require('../model/Category')
+const { Category } = require('../model/')
 
 const categoryData = [
     {
@@ -15,5 +15,5 @@ const categoryData = [
     }
 ]
 
-const seedCategory = () => Outdoor.bulkCreate(categoryData);
-module.export = seedCategory;
+const seedCategory = () => Category.bulkCreate(categoryData);
+module.exports = seedCategory;

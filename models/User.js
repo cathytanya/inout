@@ -2,8 +2,8 @@
 const {Model,DataTypes} = require('sequelize')
 const sequelize = require('../config/connection')
 
-class Indoor extends Model {}
-Indoor.init({
+class User extends Model {}
+User.init({
         // the column ID
         id: {
             // Integer
@@ -15,28 +15,35 @@ Indoor.init({
             // Uses auto increment
             autoIncrement: true
           },
-        // category_in_id int not null,
-        // foreign key (category_in_id) references category(id)
-        category_id:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references:{
-                model:'category',
-                key:'id'
-            }
+        //   username varchar(30) not null,
+        username:{
+            type: DataTypes.STRING,
+            allowNull: false
         },
-        // activity_in_Name varchar(30) not null,
-        activity_Name:{
+        // email varchar(30) not null
+        email:{
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        // password varchar(30) not null
+        password:{
             type: DataTypes.STRING,
             allowNull: false
         }
     },
     {
+        hooks: {
+          beforeCreate: async (newUserData) => {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+          }},
+    
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'indoor'
-    });
+        modelName: 'user'
+    }
+);
 
-module.exports = Indoor
+module.exports = User

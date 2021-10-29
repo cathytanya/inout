@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Category, Indoor, Outdoor } = require('../../model');
+const { Category, Indoor, Outdoor } = require('../../models');
 
 // Get all categories
 router.get('/', async (req, res) => {
   try {
     const categoryData = await Category.findAll({
-      include: [{ model: Indoor }, { model: Outdoor }],
+      // include: [{ model: Indoor }, { model: Outdoor }],
     });
     res.status(200).json(categoryData);
   } catch (err) {

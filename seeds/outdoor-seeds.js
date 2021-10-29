@@ -1,25 +1,31 @@
-const { Outdoor } = require('../model/Outdoor')
+const { Outdoor } = require('../model')
 
 const outdoorData = [
     {
-        activity_Name: 'Hiking'
+        // category_id: 1,
+        activity_name: 'Hiking'
     },
     {
-        activity_Name: 'Running'
+        // category_id: 2,
+        activity_name: 'Running'
     },
     {
-        activity_Name: 'Shopping'
+        // category_id: 3,
+        activity_name: 'Shopping'
     },
     {
-        activity_Name: 'Resteraunts'
+        // category_id: 4,
+        activity_name: 'Resteraunts'
     },
     {
-        activity_Name: 'Wine Tasting'
+        // category_id: 5,
+        activity_name: 'Wine Tasting'
     },
     {
-        activity_Name: 'Spa Day'
+        // category_id: 6,
+        activity_name: 'Spa Day'
     }
 ]
 
 const seedOutdoor = () => Outdoor.bulkCreate(outdoorData);
-module.export = seedOutdoor;
+module.exports = seedOutdoor;
