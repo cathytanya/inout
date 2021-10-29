@@ -1,4 +1,4 @@
-const { Indoor } = require('../model')
+const { Indoor } = require('../models')
 
 const indoorData = [
     {
