@@ -4,6 +4,7 @@ const withAuth = require('../util/auth');
 
 router.get('/', withAuth, async (req, res) => {
   try {
+    
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
       order: [['name', 'ASC']],
@@ -11,7 +12,7 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('homepage', {
+    res.render('index', {
       users,
       logged_in: req.session.logged_in,
     });
@@ -29,4 +30,21 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+
+// router.get('/', async (req, res) => {
+//   //TODO: Add a comment describing the purpose of the render method
+//     res.render('index');
+//   });
+
+  router.get('/activities', async (req, res) => {
+    //TODO: Add a comment describing the purpose of the render method
+      res.render('activities');
+    });
+
+    router.get('/final', async (req, res) => {
+      //TODO: Add a comment describing the purpose of the render method
+        res.render('final');
+      });
+      
+    
 module.exports = router;
