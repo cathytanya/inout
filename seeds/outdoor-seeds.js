@@ -1,4 +1,4 @@
-const { Outdoor } = require('../model')
+const { Outdoor } = require('../models')
 
 const outdoorData = [
     {
