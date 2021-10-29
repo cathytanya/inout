@@ -38,7 +38,15 @@ router.get('/login', (req, res) => {
 
   router.get('/activities', async (req, res) => {
     //TODO: Add a comment describing the purpose of the render method
-      res.render('activities');
+    try {
+      const userData = await User.findAll();
+      let users = userData.map((user) => user.get({plain:true}));
+      res.render('activities', {users})
+    } catch (err) {
+      res.status(500).json(err);
+    }
+
+      // res.render('activities');
     });
 
     router.get('/final', async (req, res) => {

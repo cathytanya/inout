@@ -25,6 +25,9 @@
       <a class="filter filter2">Art</a>
       <a class="filter filter3">Entertainment</a>
       <a class="filter filter4">Food</a>
+  {{#each users as |user|}}
+      <a class="filter filter1">{{user.username}}</a>
+    {{/each}}
         
     </div>
   </div>
