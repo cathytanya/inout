@@ -5,7 +5,7 @@ const withAuth = require('../../util/auth');
 router.get('/', async (req, res) => {
   try {
     const commentData = await Category.findAll({
-      include: [User],
+      // include: [User],
     });
     res.status(200).json(commentData);
   } catch (err) {
