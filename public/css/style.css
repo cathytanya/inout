@@ -152,14 +152,58 @@ h2{
 }
 /* PAGE 3--header styling */
 .header3 {
-    height: 15vh;
+    min-height: 15vh;
 }
-.page3-logo{
-    
-}
+
 /* PAGE 3 --info section styling */
 .info{
     margin-top: 2vh;
+}
+.info-section{
+    min-height: 40vh;
+    padding-left: 2vw;
+}
+.image-section{
+    min-height: 40vh;
+}
+#focused-image{
+    height: auto;
+    width:33vw;
+    
+}
+hr{
+    margin-left:2.5%;
+    width: 95%;
+}
+/* PAGE 3 --Comments section Styling */
+.comments-container{
+    min-height:40vh;
+    
+    
+    
+}
+.mb-3{
+    padding-left: 5vw;
+    
+}
+textarea{
+    max-width: 90%;
+    
+}
+.comments-history{    
+    padding-left: 5vw;
+    min-height: 25vh;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;    
+}
+#otherComments{
+    margin-bottom: 2vh;
+}
+#hrComments{
+    margin-left:0 !important;
+    width: 90%;
 }
 
 /* PAGE 1--media query */
@@ -239,6 +283,18 @@ h2{
         width: 100%;
         overflow: scroll;
     }
+    #focused-image{
+        height: auto;
+        width:100%;
+        
+    }
     
     
+}
+@media screen and (max-width: 991px){
+    #focused-image{
+        height: auto;
+        width:100%;
+        
+    }
 }
