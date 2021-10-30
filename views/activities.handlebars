@@ -20,13 +20,9 @@
     <!-- Preferences -->
     
     <div class="container-fluid preferences-container">
-        
-      <a class="filter filter1">Health/Wellness</a>
-      <a class="filter filter2">Art</a>
-      <a class="filter filter3">Entertainment</a>
-      <a class="filter filter4">Food</a>
-  {{#each users as |user|}}
-      <a class="filter filter1">{{user.username}}</a>
+{{!-- dynamically generate categories --}}
+  {{#each categories as |category|}}
+      <a class="filter filter1" href="/activities?category_id={{category.id}}">{{category.category_name}}</a>
     {{/each}}
         
     </div>
@@ -35,90 +31,45 @@
     <div class="container-fluid activities-container">
       <!-- First row -->
         <div class="row">
+            {{#each indoors as |indoor|}}
           <div class="col-3 column">
             <!-- Card -->
+          
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Event Name</h5>
+                <h5 class="card-title">{{indoor.activity_name}}</h5>
                 <p class="card-text">Description</p>
               </div>
+
+
+
+
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">When :</li>
                 <li class="list-group-item">Where :</li>                
               </ul> 
               <div class="card-body">
-                <a href="#" class="card-link">Go to the Webpage</a>
+                <a href="/final" class="card-link">Go to the Webpage</a>
                 <a href="#" class="card-link">Contact</a>
               </div>
             </div>    
-
+            
           </div>
-          <div class="col-3 column">
-            <!-- Card -->
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Event Name</h5>
-                <p class="card-text">Description</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">When :</li>
-                <li class="list-group-item">Where :</li>                
-              </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Go to the Webpage</a>
-                <a href="#" class="card-link">Contact</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-3 column">
-            <!-- Card -->
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Event Name</h5>
-                <p class="card-text">Description</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">When :</li>
-                <li class="list-group-item">Where :</li>                
-              </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Go to the Webpage</a>
-                <a href="#" class="card-link">Contact</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-3 column">
-            <!-- Card -->
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Event Name</h5>
-                <p class="card-text">Description</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">When :</li>
-                <li class="list-group-item">Where :</li>                
-              </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Go to the Webpage</a>
-                <a href="#" class="card-link">Contact</a>
-              </div>
-            </div>
-          </div>
+             {{/each}}
+        
           
         </div>
 
-        <!-- Second row -->
-        <div class="row">
+          <div class="row">
+            {{#each outdoors as |outdoor|}}
           <div class="col-3 column">
             <!-- Card -->
+          
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Event Name</h5>
+                <h5 class="card-title">{{outdoor.activity_name}}</h5>
                 <p class="card-text">Description</p>
               </div>
               <ul class="list-group list-group-flush">
@@ -126,71 +77,20 @@
                 <li class="list-group-item">Where :</li>                
               </ul> 
               <div class="card-body">
-                <a href="#" class="card-link">Go to the Webpage</a>
+                <a href="/final" class="card-link">Go to the Webpage</a>
                 <a href="#" class="card-link">Contact</a>
               </div>
             </div>    
-
+            
           </div>
-          <div class="col-3 column">
-            <!-- Card -->
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Event Name</h5>
-                <p class="card-text">Description</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">When :</li>
-                <li class="list-group-item">Where :</li>                
-              </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Go to the Webpage</a>
-                <a href="#" class="card-link">Contact</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-3 column">
-            <!-- Card -->
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Event Name</h5>
-                <p class="card-text">Description</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">When :</li>
-                <li class="list-group-item">Where :</li>                
-              </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Go to the Webpage</a>
-                <a href="#" class="card-link">Contact</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-3 column">
-            <!-- Card -->
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Event Name</h5>
-                <p class="card-text">Description</p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">When :</li>
-                <li class="list-group-item">Where :</li>                
-              </ul>
-              <div class="card-body">
-                <a href="#" class="card-link">Go to the Webpage</a>
-                <a href="#" class="card-link">Contact</a>
-              </div>
-            </div>
-          </div>
+             {{/each}}
+        
           
         </div>
 
     </div>
 
-    <script></script>
+  
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+      <script></script>
