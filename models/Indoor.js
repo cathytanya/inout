@@ -29,6 +29,9 @@ Indoor.init({
         activity_name:{
             type: DataTypes.STRING,
             allowNull: false
+        },
+        category_images:{
+            type: DataTypes.IMAGE
         }
     },
     {

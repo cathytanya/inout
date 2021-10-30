@@ -90,13 +90,13 @@ module.exports = router;
 
 // ///////
 // FIND THE DATA THAT YOU WANT TO RENDER
-res.render
+// res.render
 
-try {
-  const indoorData = await Indoor.findAll({
-    include: [{ model: Category }],
-  });
-  res.status(200).json(indoorData);
-} catch (err) {
-  res.status(500).json(err);
-}
+// try {
+//   const indoorData = await Indoor.findAll({
+//     include: [{ model: Category }],
+//   });
+//   res.status(200).json(indoorData);
+// } catch (err) {
+//   res.status(500).json(err);
+// }
