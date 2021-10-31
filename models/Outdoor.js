@@ -26,12 +26,12 @@ Outdoor.init(
                 key: 'id'
             },
         },
-        image: {
-            type: DataTypes.BLOB
-        }
-        // category_images:{
-        //     type: DataTypes.STRING
+        // image: {
+        //     type: DataTypes.BLOB
         // }
+        category_images:{
+            type: DataTypes.STRING
+        }
     },
     {
         sequelize,

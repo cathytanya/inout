@@ -26,12 +26,12 @@ Indoor.init(
                 key: 'id',
             },
         },
-        image: {
-            type: DataTypes.BLOB
-        }
-        // category_images:{
-        //     type: DataTypes.IMAGE
+        // image: {
+        //     type: DataTypes.BLOB
         // }
+        category_images:{
+            type: DataTypes.IMAGE
+        }
     },
     {
         sequelize,
