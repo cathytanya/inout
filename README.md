@@ -33,7 +33,7 @@ The USER STORY goes as follow
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+No installation is needed. This application is run in a live webpage.
 
 ## Usage
 
@@ -81,7 +81,7 @@ Reference material:
 
 ## GitHub
 
-If you want to know more details, [Visit Repo](https://github.com/cathytanya/inout.git)
+If you want to know more details, feel free to [visit the repo](https://github.com/cathytanya/inout.git)
 
 
 ## Features
