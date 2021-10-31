@@ -1,41 +1,35 @@
-// const { Outdoor } = require('../models')
-const { Outdoor } = require('../public/category_images/outdoor/')
+const { Outdoor } = require('../models')
+// const { Outdoor } = require('../public/images/')
 const outdoorData = [
     {
-        // category_id: 1,
         category_id: 2,
-        category_images: "/images/health.jpg",
-        activity_name: 'Hiking'
+        activity_name: 'Hiking',
+        image: "/public/images/health.jpg",
     },
     {
-        // category_id: 2,
         category_id: 2,
-        category_images: "/images/health.jpg",
-        activity_name: 'Running'
+        activity_name: 'Running',
+        image: "/public/images/health.jpg",
     },
     {
-        // category_id: 3,
         category_id: 1,
-        category_images: "/images/art.jpg",
-        activity_name: 'Museum'
+        activity_name: 'Museum trip',
+        image: "/public/images/art.jpg",
     },
     {
-        // category_id: 4,
         category_id: 3,
-        category_images: "/images/food.jpg",
-        activity_name: 'Resteraunts'
+        activity_name: 'Meal at a restaurant',
+        image: "/public/images/food.jpg",
     },
     {
-        // category_id: 5,
-        category_id: 2,
-        category_images: "/images/food.jpg",
-        activity_name: 'Wine Tasting'
-    },
-    {
-        // category_id: 6,
         category_id: 3,
-        category_images: "/public/category_images/outdoor/health.jpg",
-        activity_name: 'Concert'
+        activity_name: 'Wine Tasting',
+        image: "/public/images/food.jpg",
+    },
+    {
+        category_id: 4,
+        activity_name: 'Concert',
+        image: "/public/images/health.jpg",
     }
 ]
 

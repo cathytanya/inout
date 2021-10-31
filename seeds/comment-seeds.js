@@ -20,5 +20,4 @@ const commentData = [
 ]
 
 const seedComment = () => Comment.bulkCreate(commentData);
-console.log(commentData);
 module.exports = seedComment;
