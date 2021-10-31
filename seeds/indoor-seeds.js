@@ -2,40 +2,34 @@ const { Indoor } = require('../models')
 
 const indoorData = [
     {
-        // category_id: 4,
         category_id: 4,
-        category_images: "/images/netflix.jpg",
-        activity_name: 'Video Games'
+        activity_name: 'Video Games',
+        image: "/public/images/netflix.jpg",
     },
     {
-        // category_id: 2,
         category_id: 2,
-        category_images: "/images/meditation.jpg",
-        activity_name: 'Yoga'
+        activity_name: 'Yoga',
+        image: "/public/images/meditation.jpg",
     },
     {
-        // category_id: 3,
         category_id: 3,
-        category_images: "/images/cook.jpg",
-        activity_name: 'Receipt'
+        activity_name: 'Receipt',
+        image: "/public/images/cook.jpg",
     },
     {
-        // category_id: 1,
         category_id: 1,
-        category_images: "/images/paint.jpg",
-        activity_name: 'Paint By Number'
+        activity_name: 'Paint By Number',
+        image: "/public/images/paint.jpg",
     },
     {
-        // category_id: 4,
         category_id: 4,
-        category_images: "/images/netflix.jpg",
-        activity_name: 'Watch Movies'
+        activity_name: 'Watch Movies',
+        image: "/public/images/netflix.jpg",
     },
     {
-        // category_id: 2,
         category_id: 2,
-        category_images: "/images/meditation.jpg",
-        activity_name: 'Spa Day'
+        activity_name: 'Spa Day',
+        image: "/public/images/meditation.jpg",
     }
 ]
 
