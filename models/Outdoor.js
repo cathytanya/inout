@@ -29,7 +29,7 @@ Outdoor.init(
         // image: {
         //     type: DataTypes.BLOB
         // }
-        category_images:{
+        image:{
             type: DataTypes.STRING
         }
     },

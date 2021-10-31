@@ -29,8 +29,8 @@ Indoor.init(
         // image: {
         //     type: DataTypes.BLOB
         // }
-        category_images:{
-            type: DataTypes.IMAGE
+        image:{
+            type: DataTypes.STRING
         }
     },
     {
