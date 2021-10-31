@@ -22,7 +22,7 @@
     <div class="container-fluid preferences-container">
 {{!-- dynamically generate categories --}}
   {{#each categories as |category|}}
-      <a class="filter filter1" href="/activities?category_id={{category.id}}">{{category.category_name}}</a>
+      <a class="filter filter1" href="/outdoor?category_id={{category.category_id}}">{{category.category_name}}</a>
     {{/each}}
         
     </div>
@@ -30,37 +30,7 @@
     <!-- Activities -->
     <div class="container-fluid activities-container">
       <!-- First row -->
-        <div class="row">
-            {{#each indoors as |indoor|}}
-          <div class="col-3 column">
-            <!-- Card -->
-          
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{indoor.activity_name}}</h5>
-                <p class="card-text">Description</p>
-              </div>
-
-
-
-
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">When :</li>
-                <li class="list-group-item">Where :</li>                
-              </ul> 
-              <div class="card-body">
-                <a href="/final" class="card-link">Go to the Webpage</a>
-                <a href="#" class="card-link">Contact</a>
-              </div>
-            </div>    
-            
-          </div>
-             {{/each}}
         
-          
-        </div>
-
           <div class="row">
             {{#each outdoors as |outdoor|}}
           <div class="col-3 column">
