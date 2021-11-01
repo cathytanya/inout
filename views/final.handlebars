@@ -1,4 +1,3 @@
-<!-- Header -->
 <div class="header3">
     <div class="container-fluid header">
         <div id="logo" class="page3-logo"> IN or OUT</div>
@@ -7,11 +6,23 @@
             <div class="col" id="messages"> <i class="fas fa-envelope"></i> </div>
             <div class="col" id="notifications"> <i class="fas fa-bell"></i> </div>
             <div class="col" id="Login">
-                <button id="profile-menu">
-                    <picture>
-                        <img id="userImage" alt="picture of user" src="https://images.unsplash.com/photo-1602788034509-f07ae0b32f33?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80">
-                    </picture>
-                </button>
+              <div class="btn-group">  
+                        <button id="profile-menu">
+                            <picture>
+                                <img id="userImage" alt="picture of user" src="https://images.unsplash.com/photo-1602788034509-f07ae0b32f33?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80">
+                            </picture>
+                        </button>
+                        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Login</a>
+                            <a class="dropdown-item" href="#">Sign up</a>
+                            
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Log out</a>
+                        </div>
+                    </div>  
             </div>
         </div>
     </div>
@@ -22,8 +33,12 @@
           <div class="col-12 col-md-12 col-lg-6 info-section">
             <h2 id="activity-name">Name of the activity goes here</h2>
             <p class="activity category">Activity Category goes here</p>
-            <p class="paragraph description">Here is where we will describe the activity</p>
-            
+            <p class="paragraph description">rem ipsum dolor sit amet, consectetur adipiscing elit. Proin a tortor lacinia, egestas mauris in, cursus eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae purus tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus leo nulla, convallis id lacinia sit amet, vehicula ac dolor. Duis sed lacus tortor. Morbi vel odio molestie, pulvinar metus id, porta metus. Nam egestas volutpat odio ac gravida. Aliquam mollis risus at tortor interdum, et fermentum ligula lobortis. Suspendisse fringilla diam urna, a blandit nibh posuere ac. Praesent lorem orci, dapibus quis ipsum nec, faucibus semper ante. Nunc id tellus malesuada, egestas mi eu, congue lacus. Integer hendrerit ante non eros euismod, vel ornare tortor lobortis. Maecenas nec sapien laoreet nibh varius euismod ut eget nunc. Aliquam vel venenatis elit.</p>
+            <br>        
+            <div class="card-body">
+                <a href="#" class="card-link">Go to the Webpage</a>
+                <a href="#" class="card-link">Contact</a>
+              </div>
           </div>
           <div class="col-12 col-md-12 col-lg-6 image-section">
             <img id="focused-image" src="https://images.unsplash.com/photo-1569186273859-0a3cf0a68568?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2081&q=80" alt="Photograph that represents the category of the activity">            
@@ -43,22 +58,23 @@
             <!-- Comments history -->
         <div class="comments-history">
             <h4 id="otherComments">What other people are saying:</h4>
-            <p id="past-comment">Past comments go in paragraphs like this, separatated by lines like below</p>
+            <p id="past-comment">Had an amazing time! Thank you!</p>
             <hr id="hrComments">
-            <p id="past-comment">Past comments go in paragraphs like this, separatated by lines like below</p>
+            <p id="past-comment">Very recommended! The service was amazing and staff welcoming :)</p>
             <hr id="hrComments">
-            <p id="past-comment">Past comments go in paragraphs like this, separatated by lines like below</p>
+            <p id="past-comment">I would not do it during winter but it is definitely a must for any other season</p>
             <hr id="hrComments">
-            <p id="past-comment">Past comments go in paragraphs like this, separatated by lines like below</p>
+            <p id="past-comment">It was OK. Service could be improved but it was a busy day, maybe staff was just tired</p>
             <hr id="hrComments">
-            <p id="past-comment">Past comments go in paragraphs like this, separatated by lines like below</p>
+            <p id="past-comment">Its OK</p>
             <hr id="hrComments">
-            <p id="past-comment">Past comments go in paragraphs like this, separatated by lines like below</p>
+            <p id="past-comment">Better than being alone and bored, I'll tell you that</p>
             <hr id="hrComments">
             
         </div>
 
 </div>
     
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
