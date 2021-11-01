@@ -70,6 +70,9 @@ Collaborators:
 
 Third-party assets:
 - [Bootstrap](https://getbootstrap.com/)
+
+- [JQuery](https://jquery.com/)
+
 - [fontawesome](https://fontawesome.com/)
 - [npm](https://www.npmjs.com/)
 - [bcrypt-npm](https://www.npmjs.com/package/bcrypt)
@@ -84,11 +87,14 @@ Third-party assets:
 - [MySQL](https://www.mysql.com/)
 - [Heroku](https://www.heroku.com/nodejs) 
 
+
 Reference material:
 - [w3schools](https://www.w3schools.com/)
 - [StackOverflow](https://stackoverflow.com/)
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
+
 - [CSS-TRICKS guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 
 ## GitHub
 
