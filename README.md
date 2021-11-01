@@ -21,6 +21,7 @@ The USER STORY goes as follow
 
 ## Table of Contents
 
+
   - [<In-Or-Out>](#in-or-out)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
@@ -72,17 +73,23 @@ Collaborators:
 
 Third-party assets:
 - [Bootstrap](https://getbootstrap.com/)
+
+- [JQuery](https://jquery.com/)
+
 - [fontawesome](https://fontawesome.com/)
 - [npm](https://www.npmjs.com/)
 - [Jest](https://jestjs.io/)
 - [MySQL](https://www.mysql.com/)
 - [Heroku](https://www.heroku.com/nodejs) 
 
+
 Reference material:
 - [w3schools](https://www.w3schools.com/)
 - [StackOverflow](https://stackoverflow.com/)
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
+
 - [CSS-TRICKS guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 
 ## GitHub
 
@@ -90,6 +97,17 @@ If you want to know more details, feel free to [visit the repo](https://github.c
 
 
 ## Features
+
+
+- Bootstrap
+- Google Fonts
+- Node.js
+- File System
+- npm
+- Inquirer
+- Jest
+- HTML
+- CSS
 
 - Heroku
 - SQL / MySQL- 
@@ -103,6 +121,7 @@ If you want to know more details, feel free to [visit the repo](https://github.c
 - Jest
 - HTML/Handlebars
 - CSS and Flexbox
+
 - JavaScript
 
 ## Tests

@@ -1,16 +1,19 @@
 //fetch to create new user and create sessionlet submit=document.querySelector("#submitbtn")
 //fetch to login user and authenticate sbmtbtn
-let submit1=document.querySelector("#sbmtbtn")
+
+let submit1 = document.querySelector("#sbmtbtn")
 const signup = async (event) => {
     event.preventDefault();
-    let email = document.querySelector("#form2Example17").value
+    let password = document.querySelector("#form3Example8").value
     //take values from the form
-    let password = document.querySelector("#form2Example27").value
-    if (email && password) {
+    let email = document.querySelector("#form3Example1n").value
+    let username = document.querySelector("#form3Example1m").value
+    if (email && password && username) {
         console.log(email, password);
-        const response = await fetch('/api/users/login', {
+        const response = await fetch('/api/users/', {
             method: 'POST',
-            body: JSON.stringify({ email, password }),
+            body: JSON.stringify({username, email, password }),
+
             headers: { "Content-Type": "application/json" }
             //the body from the form values
         })
@@ -24,4 +27,4 @@ const signup = async (event) => {
     }
 }
 
-submit1.addEventListener("click", login)
+submit1.addEventListener("click", signup)

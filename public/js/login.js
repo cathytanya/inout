@@ -9,7 +9,9 @@ const login = async (event) => {
         console.log(email, password);
         const response = await fetch('/api/users/login', {
             method: 'POST',
-            body: JSON.stringify({ email, password }),
+
+            body: JSON.stringify({ email:email, password:password }),
+
             headers: { "Content-Type": "application/json" }
             //the body from the form values
         })
