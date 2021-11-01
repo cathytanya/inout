@@ -5,8 +5,6 @@ const userData = [
         username:'clintEast',
         email:'loneranger@yahoo.ca',
         password:'cowboy7'
-        
-        
     },
     {
         username:'willSmith',
