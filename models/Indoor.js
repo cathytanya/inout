@@ -26,9 +26,7 @@ Indoor.init(
                 key: 'id',
             },
         },
-        // image: {
-        //     type: DataTypes.BLOB
-        // }
+        // category to have the images
         image:{
             type: DataTypes.STRING
         }
