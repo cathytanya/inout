@@ -35,7 +35,6 @@ router.get('/outdoor/:category_id', async (req, res) => {
 })
 
 
-
 router.get('/outdoor', async (req, res) => {
 
   console.log(req.query)
@@ -43,6 +42,10 @@ router.get('/outdoor', async (req, res) => {
   //TODO: Add a comment describing the purpose of the render method
   try {
 
+  console.log(req.query)
+  console.log(req.params)
+  //TODO: Add a comment describing the purpose of the render method
+  try {
 
     // user table data
     const userData = await User.findAll();
@@ -84,11 +87,13 @@ router.get('/indoor/:category_id', async (req, res) => {
 
     res.render('indoor', { indoors, categories })
 
+
   } catch (err) {
     res.status(500).json(err);
   }
 
 })
+
 
 router.get('/indoor', async (req, res) => {
   console.log('indoor')
@@ -117,13 +122,21 @@ router.get('/indoor', async (req, res) => {
 });
 
 
+    res.render('indoor', { users, indoors, categories })
+  } catch (err) {
+    res.status(500).json(err);
+  }
 
+
+});
 
 router.get('/login',async (req,res)=>{
 
 
   res.render('login')
 })
+
+
 
 
 router.get('/signup',(req,res)=>{
@@ -142,52 +155,18 @@ router.get('/signup',(req,res)=>{
 
 
 
-router.get('/final/:category_id',withAuth, async (req, res) => {
-  try {
 
 
-    // user table data
-    const userData = await User.findAll();
-    let users = userData.map((user) => user.get({ plain: true }));
 
-    // categories table data
-    const categoryData = await Category.findAll();
-    let categories = categoryData.map((category) => category.get({ plain: true }));
-    console.log(categories)
-    const whereObject = {}
-    if (req.query.category_id) {
-      whereObject["id"] = req.query.category_id
-    }
-
-    const outdoorData = await Outdoor.findAll({ where: whereObject });
-    let outdoors = outdoorData.map((user) => user.get({ plain: true }));
-    const indoorData = await Indoor.findAll({ where: whereObject });
-    let indoors = indoorData.map((user) => user.get({ plain: true }));
-    console.log(indoors)
-    console.log(outdoors)
-    res.render('final', { users, outdoors, categories })
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.get('/final', (req, res) => {
+//look for that outdoor activity using id form parameter
   res.render('final');
 });
+
+
+
 
 
 module.exports = router;
 
 
-
-
-
-// ///////
-// FIND THE DATA THAT YOU WANT TO RENDER
-// res.render
-
-// try {
-//   const indoorData = await Indoor.findAll({
-//     include: [{ model: Category }],
-//   });
-//   res.status(200).json(indoorData);
-// } catch (err) {
-//   res.status(500).json(err);
-// }
