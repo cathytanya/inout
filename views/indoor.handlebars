@@ -1,71 +1,83 @@
 <div class="background-image">
-    <!-- Header -->
-    <header>
-        <div class="container-fluid header">
-            <div id="logo"> IN or OUT</div>
-            <div class="row">
-                <div class="col" id="goBack"><i class="fas fa-home"></i></div>
-                <div class="col" id="messages"> <i class="fas fa-envelope"></i> </div>
-                <div class="col" id="notifications"> <i class="fas fa-bell"></i> </div>
-                <div class="col" id="Login">
-                    <button id="profile-menu">
-                        <picture>
-                            <img id="userImage" alt="picture of user" src="https://images.unsplash.com/photo-1602788034509-f07ae0b32f33?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80">
-                        </picture>
-                    </button>
-                </div>
+  <!-- Header -->
+  <header class="col-12">
+    <div class="container-fluid header">
+      <div id="logo"> IN or OUT</div>
+      <div class="row">
+        <div class="col-12 col-md-4 col-lg-4" id="messages"> <i class="fas fa-envelope"></i> </div>
+        <div class="col-12 col-md-4 col-lg-4" id="notifications"> <i class="fas fa-bell"></i> </div>
+        <div class="col-12 col-md-4 col-lg-4" id="login">
+          <div class="btn-group">
+            <button id="profile-menu">
+              <picture>
+                <img id="userImage" alt="picture of user"
+                  src="https://images.unsplash.com/photo-1602788034509-f07ae0b32f33?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80">
+              </picture>
+            </button>
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/login">Login</a>
+              <a class="dropdown-item" href="/signup">Sign up</a>
+
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Log out</a>
             </div>
-        </div>
-    </header>
-    <!-- Preferences -->
-    
-    <div class="container-fluid preferences-container">
-{{!-- dynamically generate categories --}}
-  {{#each categories as |category|}}
-      <a class="filter filter1" href="/indoor/{{category.id}}">{{category.category_name}}</a>
-    {{/each}}
-        
-    </div>
-  </div>
-    <!-- Activities -->
-    <div class="container-fluid activities-container">
-      <!-- First row -->
-        <div class="row">
-            {{#each indoors as |indoor|}}
-          <div class="col-3 column">
-            <!-- Card -->
-          
-            <div class="card" style="width: 18rem;">
-              <img src="{{indoor.image}}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{indoor.activity_name}}</h5>
-                <p class="card-text">Description</p>
-              </div>
-
-
-
-
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">When :</li>
-                <li class="list-group-item">Where :</li>                
-              </ul> 
-              <div class="card-body">
-                <a href="/final" class="card-link">Go to the Webpage</a>
-                <a href="#" class="card-link">Contact</a>
-              </div>
-            </div>    
-            
           </div>
-             {{/each}}
-        
-          
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Preferences -->
+
+  <div class="container-fluid preferences-container">
+
+    {{#each categories as |category|}}
+    <a class="filter filter1" href="/indoor/{{category.id}}">{{category.category_name}}</a>
+    {{/each}}
+
+  </div>
+</div>
+<!-- Activities -->
+<div class="container-fluid activities-container">
+  <!-- First row -->
+  <div class="row">
+    {{#each indoors as |indoor|}}
+    <div class="col-3 column">
+      <!-- Card -->
+
+      <div class="card" style="width: 18rem;">
+        <img src="{{indoor.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{indoor.activity_name}}</h5>
+
         </div>
 
-       
+        <ul class="list-group list-group-flush">
+
+        </ul>
+        <div class="card-body">
+          <a href="/final" class="card-link">Description</a>
+
+        </div>
+      </div>
 
     </div>
+    {{/each}}
 
-  
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-      <script></script>
+
+  </div>
+
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script></script>
