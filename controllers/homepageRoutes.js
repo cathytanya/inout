@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { User, Indoor, Outdoor, Category } = require('../models');
+const { User, Indoor, Outdoor, Category,Comment } = require('../models');
 const withAuth = require('../util/auth');
 
 
@@ -130,21 +130,23 @@ router.get('/signup',(req,res)=>{
 })
 
 
+router.get('/final',async (req, res) => {
+  //look for that outdoor activity using id form parameter
+  
+  try{
+  
+    const commentData=await Comment.findAll()
+  
+    const comments =commentData.map(comment=>comment.get({plain:true}))
+    
+    res.render('final',{comments});
+  }catch(err){
+    res.status(500).json(err)
+  }
+  
+  });
 
 
-
-
-
-
-
-
-
-
-
-router.get('/final', (req, res) => {
-//look for that outdoor activity using id form parameter
-  res.render('final');
-});
 
 
 

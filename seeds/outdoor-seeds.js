@@ -168,6 +168,5 @@ const outdoorData = [
         image: "/images/kart.jpg",
     }
 ]
-
 const seedOutdoor = () => Outdoor.bulkCreate(outdoorData);
 module.exports = seedOutdoor;
