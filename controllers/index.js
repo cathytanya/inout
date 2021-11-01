@@ -4,5 +4,8 @@ const homepageRoutes = require('./homepageRoutes');
 
 router.use('/', homepageRoutes);
 router.use('/api', apiRoutes);
+router.get('*', (req, res) => { 
+    res.render('homepage');
+  })
 
 module.exports = router;

@@ -32,6 +32,7 @@ const outdoorData = [
         activity_name: 'Historical Tour',
         image: "/images/tour.jpg",
     },
+
     // the following will be the health/wellness events that occur outside
     {
         category_id: 2,
@@ -124,6 +125,7 @@ const outdoorData = [
         activity_name: 'Korean Barbaque',
         image: "/images/korean.jpg",
     },
+
     // the following will be the entertainment events that occur outside
     {
         category_id: 4,
