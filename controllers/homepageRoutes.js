@@ -35,7 +35,6 @@ router.get('/outdoor/:category_id', async (req, res) => {
 })
 
 
-
 router.get('/outdoor', async (req, res) => {
 
   console.log(req.query)
@@ -43,6 +42,10 @@ router.get('/outdoor', async (req, res) => {
   //TODO: Add a comment describing the purpose of the render method
   try {
 
+  console.log(req.query)
+  console.log(req.params)
+  //TODO: Add a comment describing the purpose of the render method
+  try {
 
     // user table data
     const userData = await User.findAll();
@@ -84,11 +87,13 @@ router.get('/indoor/:category_id', async (req, res) => {
 
     res.render('indoor', { indoors, categories })
 
+
   } catch (err) {
     res.status(500).json(err);
   }
 
 })
+
 
 router.get('/indoor', async (req, res) => {
   console.log('indoor')
@@ -117,14 +122,21 @@ router.get('/indoor', async (req, res) => {
 });
 
 
+    res.render('indoor', { users, indoors, categories })
+  } catch (err) {
+    res.status(500).json(err);
+  }
 
+
+});
 
 router.get('/login',async (req,res)=>{
 
 
-
   res.render('login')
 })
+
+
 
 
 router.get('/signup',(req,res)=>{
@@ -133,6 +145,13 @@ router.get('/signup',(req,res)=>{
 
   res.render('signup')
 })
+
+
+
+
+
+
+
 
 
 

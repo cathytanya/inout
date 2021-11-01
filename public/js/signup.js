@@ -1,5 +1,6 @@
 //fetch to create new user and create sessionlet submit=document.querySelector("#submitbtn")
 //fetch to login user and authenticate sbmtbtn
+
 let submit1 = document.querySelector("#sbmtbtn")
 const signup = async (event) => {
     event.preventDefault();
@@ -12,6 +13,7 @@ const signup = async (event) => {
         const response = await fetch('/api/users/', {
             method: 'POST',
             body: JSON.stringify({username, email, password }),
+
             headers: { "Content-Type": "application/json" }
             //the body from the form values
         })
@@ -24,4 +26,5 @@ const signup = async (event) => {
         }
     }
 }
+
 submit1.addEventListener("click", signup)

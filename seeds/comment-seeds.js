@@ -10,6 +10,7 @@ const commentData = [
         comment: 'I miss being inside'
     },
     {
+
         user_id: 1,
         comment: 'I miss outside'
     },
