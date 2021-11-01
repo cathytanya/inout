@@ -53,24 +53,16 @@
             <div class="mb-3 textarea-container">
                 <label for="exampleFormControlTextarea1" class="form-label"><h4>Leave a Comment!</h4></label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <input type="submit" value="Submit">
             </div>
         </div>
             <!-- Comments history -->
         <div class="comments-history">
-            <h4 id="otherComments">What other people are saying:</h4>
-            <p id="past-comment">Had an amazing time! Thank you!</p>
+          {{#each comments as |comment|}}
+            <p id="past-comment" >{{comment.comment}}</p>
             <hr id="hrComments">
-            <p id="past-comment">Very recommended! The service was amazing and staff welcoming :)</p>
-            <hr id="hrComments">
-            <p id="past-comment">I would not do it during winter but it is definitely a must for any other season</p>
-            <hr id="hrComments">
-            <p id="past-comment">It was OK. Service could be improved but it was a busy day, maybe staff was just tired</p>
-            <hr id="hrComments">
-            <p id="past-comment">Its OK</p>
-            <hr id="hrComments">
-            <p id="past-comment">Better than being alone and bored, I'll tell you that</p>
-            <hr id="hrComments">
-            
+            {{/each}}
+        
         </div>
 
 </div>
@@ -78,3 +70,4 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/js/final.js"></script>
