@@ -5,13 +5,9 @@ const withAuth = require('../util/auth');
 
 
 router.get('/homepage', (req, res) => {
-
   res.render('homepage');
 });
 
-router.get('/', (req, res) => {
-  res.redirect('/homepage')
-})
 
 router.get('/outdoor/:category_id', async (req, res) => {
   console.log(req.params.category_id)
@@ -36,11 +32,6 @@ router.get('/outdoor/:category_id', async (req, res) => {
 
 
 router.get('/outdoor', async (req, res) => {
-
-  console.log(req.query)
-  console.log(req.params)
-  //TODO: Add a comment describing the purpose of the render method
-  try {
 
   console.log(req.query)
   console.log(req.params)
@@ -121,14 +112,6 @@ router.get('/indoor', async (req, res) => {
 
 });
 
-
-    res.render('indoor', { users, indoors, categories })
-  } catch (err) {
-    res.status(500).json(err);
-  }
-
-
-});
 
 router.get('/login',async (req,res)=>{
 
