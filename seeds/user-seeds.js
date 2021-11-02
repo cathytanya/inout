@@ -5,6 +5,8 @@ const userData = [
         username:'clintEast',
         email:'loneranger@yahoo.ca',
         password:'cowboy7'
+        
+        
     },
     {
         username:'willSmith',
@@ -13,5 +15,9 @@ const userData = [
     }
 ]
 
-const seedUser = () => User.bulkCreate(userData);
+const seedUser = () => User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+}).then(response=()=>console.log(response));
+
 module.exports = seedUser;
