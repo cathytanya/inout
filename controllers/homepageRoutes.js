@@ -105,4 +105,15 @@ router.get("/final", async (req, res) => {
   }
 });
 
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.replace('/homepage')
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+
+
 module.exports = router;
