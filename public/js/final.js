@@ -21,7 +21,7 @@ const task = async (event) => {
         }
         else {
             console.log("denied")
-            alert("sign in pls!")
+            alert("Please sign in to comment!")
         }
  
 }
