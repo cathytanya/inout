@@ -16,6 +16,7 @@ const task = async (event) => {
         })
         if (response.ok) {
             console.log("through proper")
+            document.location.replace('/final')
             
         }
         else {
