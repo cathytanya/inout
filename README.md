@@ -35,7 +35,7 @@ No installation is needed. This application is run in a live webpage.
 
 ## Usage
 
-To use this application, go to the deployed webpage by followig this link: [Visit the deployed page]()
+To use this application, go to the deployed webpage by followig this link: [Visit the deployed page](https://inout-app.herokuapp.com/)
 
 ![Image of the Landing Page](./public/images/Index-Screenshot.PNG "Landing Page")
 
