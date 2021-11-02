@@ -1,4 +1,14 @@
-# <In-Or-Out>
+## <In-Or-Out>
+
+## Table of Contents
+
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [GitHub](#github)
+  - [Features](#features)
+  - [Tests](#tests)
 
 ## Description
 
@@ -19,26 +29,13 @@ The USER STORY goes as follow
     SO THAT I can have options of things to do, spending more time doing and enjoying rather than choosing.  
 
 
-## Table of Contents
-
-
-  - [<In-Or-Out>](#in-or-out)
-  - [Description](#description)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Credits](#credits)
-  - [GitHub](#github)
-  - [Features](#features)
-  - [Tests](#tests)
-
 ## Installation
 
 No installation is needed. This application is run in a live webpage.
 
 ## Usage
 
-To use this application, go to the deployed webpage by followig this link: [Visit the deployed page]()
+To use this application, go to the deployed webpage by followig this link: [Visit the deployed page](https://inout-app.herokuapp.com/)
 
 ![Image of the Landing Page](./public/images/Index-Screenshot.PNG "Landing Page")
 
@@ -78,6 +75,14 @@ Third-party assets:
 
 - [fontawesome](https://fontawesome.com/)
 - [npm](https://www.npmjs.com/)
+- [bcrypt-npm](https://www.npmjs.com/package/bcrypt)
+- [dotenv-npm](https://www.npmjs.com/package/dotenv)
+- [sequelize-npm](https://www.npmjs.com/package/sequelize)
+- [ExpressJs](https://expressjs.com/)
+- [Express-Handlebars-npm](https://www.npmjs.com/package/express-handlebars)
+- [Express-session-npm](https://www.npmjs.com/package/express-session)
+- [mysql2-npm](https://www.npmjs.com/package/mysql2)
+- [validatorjs-npm](https://www.npmjs.com/package/validatorjs)
 - [Jest](https://jestjs.io/)
 - [MySQL](https://www.mysql.com/)
 - [Heroku](https://www.heroku.com/nodejs) 
@@ -98,31 +103,30 @@ If you want to know more details, feel free to [visit the repo](https://github.c
 
 ## Features
 
+FrontEnd:
+- Bootstrap grid, cards, forms and dropdowns
+- Google Fonts and Fontawesome fonts and icons
+- HTML/Handlebars
+- CSS and Flexbox
 
-- Bootstrap
-- Google Fonts
-- Node.js
-- File System
-- npm
-- Inquirer
-- Jest
-- HTML
-- CSS
-
+BackEnd:
 - Heroku
 - SQL / MySQL- 
 - Object Oriented Programming
 - Model View Controller framework
-- Bootstrap grid, cards, forms and dropdowns
-- Google Fonts and Fontawesome fonts and icons
 - Node.js
 - File System
-- npm
-- Jest
-- HTML/Handlebars
-- CSS and Flexbox
-
-- JavaScript
+- Dependencies:
+  - bcrypt 5.01
+  - Sequelize 7.1.2
+  - dotenv 10.0.0
+  - Express 4.17.1
+  - Express Handlebars 5.3.4
+  - Express Session 1.17.2
+  - mysql2 2.3.2
+  - sequelize 6.8.0
+  - Validator-js 0.2.1
+  
 
 ## Tests
 
