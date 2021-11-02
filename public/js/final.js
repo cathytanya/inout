@@ -20,7 +20,7 @@ const task = async (event) => {
         }
         else {
             console.log("denied")
-            alert(response.statusText)
+            alert("sign in pls!")
         }
  
 }
